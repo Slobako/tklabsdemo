@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Onboarding Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstOnboardingController" customModule="tklabsdemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="81D-GY-JoW">
+                                <rect key="frame" x="168" y="507" width="39" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="gPE-oe-QLq"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.80392156859999997" green="1" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.31054514189999999" green="0.24112303769999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkm-r1-tLI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="467"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3q-2s-n4k">
+                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="467"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1200" id="D88-72-G6J"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="J3q-2s-n4k" secondAttribute="trailing" id="Ahc-kt-Kkf"/>
+                                    <constraint firstItem="J3q-2s-n4k" firstAttribute="height" secondItem="Tkm-r1-tLI" secondAttribute="height" id="Ej6-cR-ba4"/>
+                                    <constraint firstAttribute="bottom" secondItem="J3q-2s-n4k" secondAttribute="bottom" id="QpC-ha-6MB"/>
+                                    <constraint firstItem="J3q-2s-n4k" firstAttribute="top" secondItem="Tkm-r1-tLI" secondAttribute="top" id="VdL-X3-5qE"/>
+                                    <constraint firstItem="J3q-2s-n4k" firstAttribute="leading" secondItem="Tkm-r1-tLI" secondAttribute="leading" id="hnD-Gu-U8r"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="146" translatesAutoresizingMaskIntoConstraints="NO" id="mCO-b9-bu1">
+                                <rect key="frame" x="60" y="577" width="255" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS0-32-BC2">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3Is-V3-FQX"/>
+                                        </constraints>
+                                        <state key="normal" title="SKIP"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-go-CaG">
+                                        <rect key="frame" x="216" y="0.0" width="39" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="rqb-6C-QWW"/>
+                                        </constraints>
+                                        <state key="normal" title="NEXT"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tkm-r1-tLI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0ZA-7D-xFI"/>
+                            <constraint firstItem="81D-GY-JoW" firstAttribute="top" secondItem="Tkm-r1-tLI" secondAttribute="bottom" constant="20" id="1d3-Gv-6Ai"/>
+                            <constraint firstItem="Tkm-r1-tLI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7ME-QD-1yM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mCO-b9-bu1" secondAttribute="bottom" constant="60" id="Lu1-mi-hCg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mCO-b9-bu1" secondAttribute="trailing" constant="60" id="g6J-GC-eAg"/>
+                            <constraint firstItem="81D-GY-JoW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kJi-HQ-zVX"/>
+                            <constraint firstItem="mCO-b9-bu1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="kjZ-4f-X9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tkm-r1-tLI" secondAttribute="trailing" id="lgZ-SJ-pu6"/>
+                            <constraint firstItem="mCO-b9-bu1" firstAttribute="top" secondItem="81D-GY-JoW" secondAttribute="bottom" constant="50" id="ui6-FO-saH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="J3q-2s-n4k" id="CMA-NK-3at"/>
+                        <outlet property="horizontalScrollView" destination="Tkm-r1-tLI" id="qVh-Qv-CKx"/>
+                        <outlet property="pageControl" destination="81D-GY-JoW" id="QOu-4l-Jwu"/>
+                        <outlet property="scrollsContentViewWidth" destination="D88-72-G6J" id="gju-4v-5a4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
