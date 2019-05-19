@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First Onboarding Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,18 +24,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="81D-GY-JoW">
-                                <rect key="frame" x="168" y="507" width="39" height="20"/>
+                                <rect key="frame" x="168" y="497" width="39" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="gPE-oe-QLq"/>
+                                    <constraint firstAttribute="height" constant="30" id="gPE-oe-QLq"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" red="0.80392156859999997" green="1" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.31054514189999999" green="0.24112303769999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkm-r1-tLI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="457"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3q-2s-n4k">
-                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="467"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="457"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1200" id="D88-72-G6J"/>
@@ -50,28 +55,60 @@
                                 <rect key="frame" x="60" y="577" width="255" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS0-32-BC2">
-                                        <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3Is-V3-FQX"/>
                                         </constraints>
-                                        <state key="normal" title="SKIP"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <state key="normal" title="SKIP">
+                                            <color key="titleColor" red="0.27450980390000002" green="0.32549019610000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="skipTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jNS-Fv-4Nn"/>
+                                            <segue destination="Ahe-jk-elr" kind="presentation" id="9Ze-Ne-Yf7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-go-CaG">
-                                        <rect key="frame" x="216" y="0.0" width="39" height="30"/>
+                                        <rect key="frame" x="219" y="0.0" width="36" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="rqb-6C-QWW"/>
                                         </constraints>
-                                        <state key="normal" title="NEXT"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <state key="normal" title="NEXT">
+                                            <color key="titleColor" red="0.36582155560000001" green="0.4106158935" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kvg-Ky-k9K"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf6-jK-Zvi">
+                                <rect key="frame" x="112.5" y="567" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.3658215556474701" green="0.41061589354719752" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JCO-X9-NqU"/>
+                                    <constraint firstAttribute="width" constant="150" id="vwc-R2-jvU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStartedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mE-ty-UIL"/>
+                                    <segue destination="Ahe-jk-elr" kind="presentation" id="6SN-sH-Gbs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tkm-r1-tLI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0ZA-7D-xFI"/>
                             <constraint firstItem="81D-GY-JoW" firstAttribute="top" secondItem="Tkm-r1-tLI" secondAttribute="bottom" constant="20" id="1d3-Gv-6Ai"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sf6-jK-Zvi" secondAttribute="bottom" constant="50" id="6PZ-No-8Vd"/>
                             <constraint firstItem="Tkm-r1-tLI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7ME-QD-1yM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mCO-b9-bu1" secondAttribute="bottom" constant="60" id="Lu1-mi-hCg"/>
+                            <constraint firstItem="sf6-jK-Zvi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xio-eV-as5"/>
+                            <constraint firstItem="sf6-jK-Zvi" firstAttribute="top" secondItem="81D-GY-JoW" secondAttribute="bottom" constant="40" id="buD-fl-nrV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mCO-b9-bu1" secondAttribute="trailing" constant="60" id="g6J-GC-eAg"/>
                             <constraint firstItem="81D-GY-JoW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kJi-HQ-zVX"/>
                             <constraint firstItem="mCO-b9-bu1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="kjZ-4f-X9b"/>
@@ -80,16 +117,38 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sWB-Zk-1cl"/>
                     <connections>
                         <outlet property="contentView" destination="J3q-2s-n4k" id="CMA-NK-3at"/>
+                        <outlet property="getStartedButton" destination="sf6-jK-Zvi" id="lwQ-bG-nlk"/>
                         <outlet property="horizontalScrollView" destination="Tkm-r1-tLI" id="qVh-Qv-CKx"/>
+                        <outlet property="nextButton" destination="e1G-go-CaG" id="Ck0-LF-s2H"/>
                         <outlet property="pageControl" destination="81D-GY-JoW" id="QOu-4l-Jwu"/>
                         <outlet property="scrollsContentViewWidth" destination="D88-72-G6J" id="gju-4v-5a4"/>
+                        <outlet property="skipButton" destination="mS0-32-BC2" id="7o7-ax-Jzz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ewJ-zm-m9L">
+            <objects>
+                <viewController id="Ahe-jk-elr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ck1-zy-16B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y1s-cK-38f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPG-HL-BAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6SN-sH-Gbs"/>
+    </inferredMetricsTieBreakers>
 </document>
