@@ -20,7 +20,8 @@ class CategoryViewController: UIViewController {
         arrayOfCategories = DataManager.shared.populateCategories()
         
         categoryTableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        
+        categoryTableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
+
         // to remove extra cells
         categoryTableView.tableFooterView = UIView()
     }
@@ -28,6 +29,7 @@ class CategoryViewController: UIViewController {
 }
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfCategories.count
     }
@@ -40,6 +42,5 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
+
 }
