@@ -11,6 +11,7 @@ import TKOnboarding
 
 class FirstOnboardingController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var horizontalScrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -19,9 +20,10 @@ class FirstOnboardingController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var getStartedButton: UIButton!
     
-    
+    // MARK: - Properties
     var pages: [OnboardingView] = []
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,10 +85,7 @@ class FirstOnboardingController: UIViewController {
         }
     }
     
-    //MARK: - IBActions
-    @IBAction func skipTapped(_ sender: Any) {
-    }
-    
+    // MARK: - IBActions
     @IBAction func nextTapped(_ sender: Any) {
         
         if pageControl.currentPage < 2 {
@@ -102,9 +101,6 @@ class FirstOnboardingController: UIViewController {
         }
     }
     
-    @IBAction func getStartedTapped(_ sender: Any) {
-    }
-    
     fileprivate func hideUnhideButtons() {
         UIView.transition(with: skipButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
             self.skipButton.isHidden = true
@@ -118,6 +114,7 @@ class FirstOnboardingController: UIViewController {
     }
 }
 
+// MARK: - ScrollView delegate
 extension FirstOnboardingController: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

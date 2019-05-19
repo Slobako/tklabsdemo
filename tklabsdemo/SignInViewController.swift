@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordLine: UIView!
     @IBOutlet weak var loginButton: UIButton!
     
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,13 +38,26 @@ class SignInViewController: UIViewController {
     }
     
     @objc func backTapped() {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            self.view.endEditing(true)
+        })
     }
 
+    // Dismisses keyboard when tapped outside of text fields
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
 
 }
 
+// MARK: - TextField delegate
 extension SignInViewController: UITextFieldDelegate {
+    
+    private func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == usernameTextField {

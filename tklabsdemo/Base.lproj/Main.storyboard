@@ -64,7 +64,6 @@
                                             <color key="titleColor" red="0.27450980390000002" green="0.32549019610000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="skipTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jNS-Fv-4Nn"/>
                                             <segue destination="Ahe-jk-elr" kind="presentation" modalTransitionStyle="crossDissolve" id="9Ze-Ne-Yf7"/>
                                         </connections>
                                     </button>
@@ -95,7 +94,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="getStartedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mE-ty-UIL"/>
                                     <segue destination="Ahe-jk-elr" kind="presentation" modalTransitionStyle="crossDissolve" id="6SN-sH-Gbs"/>
                                 </connections>
                             </button>
