@@ -38,9 +38,7 @@ class SignInViewController: UIViewController {
     }
     
     @objc func backTapped() {
-        dismiss(animated: true, completion: {
-            self.view.endEditing(true)
-        })
+        dismiss(animated: true, completion: nil)
     }
 
     // Dismisses keyboard when tapped outside of text fields
