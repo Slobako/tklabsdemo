@@ -26,18 +26,19 @@ class FirstOnboardingController: UIViewController {
         super.viewDidLoad()
         
         horizontalScrollView.delegate = self
-        
+        setupViews()
+    }
+    
+    func setupViews() {
         getStartedButton.isHidden = true
-        getStartedButton.layer.masksToBounds = true
+        getStartedButton.clipsToBounds = true
         getStartedButton.layer.cornerRadius = 25
         
         pages = createPages()
         setupPagesInScrollView()
-
+        
         pageControl.numberOfPages = pages.count
         pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControl.Event.valueChanged)
-        
-        
     }
     
     func setupPagesInScrollView() {
