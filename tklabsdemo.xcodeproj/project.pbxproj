@@ -24,8 +24,8 @@
 		45192F1322911A7D004D38BB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45192F1222911A7D004D38BB /* Category.swift */; };
 		45192F1522911B66004D38BB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45192F1422911B66004D38BB /* DataManager.swift */; };
 		45192F1722911E2F004D38BB /* CategoryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45192F1622911E2F004D38BB /* CategoryName.swift */; };
-		45F99134228F5D1B00BB7D47 /* TKOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F99133228F5CE200BB7D47 /* TKOnboarding.framework */; };
-		45F99135228F5D1B00BB7D47 /* TKOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45F99133228F5CE200BB7D47 /* TKOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45285BFE22915F540041C4B3 /* TKOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45285BFD22915F4A0041C4B3 /* TKOnboarding.framework */; };
+		45285BFF22915F540041C4B3 /* TKOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45285BFD22915F4A0041C4B3 /* TKOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45F9913A228F5E1500BB7D47 /* FirstOnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F99139228F5E1500BB7D47 /* FirstOnboardingController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,16 +44,16 @@
 			remoteGlobalIDString = 45015E26228CBC6A0026A2A0;
 			remoteInfo = tklabsdemo;
 		};
-		45F99132228F5CE200BB7D47 /* PBXContainerItemProxy */ = {
+		45285BFC22915F4A0041C4B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45F9912E228F5CE100BB7D47 /* TKOnboarding.xcodeproj */;
+			containerPortal = 45285BF822915F4A0041C4B3 /* TKOnboarding.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 45F9911F228F51B000BB7D47;
 			remoteInfo = TKOnboarding;
 		};
-		45F99136228F5D1B00BB7D47 /* PBXContainerItemProxy */ = {
+		45285C0022915F540041C4B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45F9912E228F5CE100BB7D47 /* TKOnboarding.xcodeproj */;
+			containerPortal = 45285BF822915F4A0041C4B3 /* TKOnboarding.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 45F9911E228F51B000BB7D47;
 			remoteInfo = TKOnboarding;
@@ -67,7 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				45F99135228F5D1B00BB7D47 /* TKOnboarding.framework in Embed Frameworks */,
+				45285BFF22915F540041C4B3 /* TKOnboarding.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +98,7 @@
 		45192F1222911A7D004D38BB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		45192F1422911B66004D38BB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		45192F1622911E2F004D38BB /* CategoryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryName.swift; sourceTree = "<group>"; };
-		45F9912E228F5CE100BB7D47 /* TKOnboarding.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TKOnboarding.xcodeproj; path = ../../Challenges/TKOnboarding/TKOnboarding/TKOnboarding.xcodeproj; sourceTree = "<group>"; };
+		45285BF822915F4A0041C4B3 /* TKOnboarding.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TKOnboarding.xcodeproj; path = ../TKOnboarding/TKOnboarding/TKOnboarding.xcodeproj; sourceTree = "<group>"; };
 		45F99139228F5E1500BB7D47 /* FirstOnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnboardingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F99134228F5D1B00BB7D47 /* TKOnboarding.framework in Frameworks */,
+				45285BFE22915F540041C4B3 /* TKOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +131,7 @@
 		45015E1E228CBC6A0026A2A0 = {
 			isa = PBXGroup;
 			children = (
-				45F9912E228F5CE100BB7D47 /* TKOnboarding.xcodeproj */,
+				45285BF822915F4A0041C4B3 /* TKOnboarding.xcodeproj */,
 				45015E29228CBC6A0026A2A0 /* tklabsdemo */,
 				45015E5B228CD39F0026A2A0 /* Fonts */,
 				45015E41228CBC770026A2A0 /* tklabsdemoTests */,
@@ -231,10 +231,10 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		45F9912F228F5CE100BB7D47 /* Products */ = {
+		45285BF922915F4A0041C4B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45F99133228F5CE200BB7D47 /* TKOnboarding.framework */,
+				45285BFD22915F4A0041C4B3 /* TKOnboarding.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				45F99137228F5D1B00BB7D47 /* PBXTargetDependency */,
+				45285C0122915F540041C4B3 /* PBXTargetDependency */,
 			);
 			name = tklabsdemo;
 			productName = tklabsdemo;
@@ -333,8 +333,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 45F9912F228F5CE100BB7D47 /* Products */;
-					ProjectRef = 45F9912E228F5CE100BB7D47 /* TKOnboarding.xcodeproj */;
+					ProductGroup = 45285BF922915F4A0041C4B3 /* Products */;
+					ProjectRef = 45285BF822915F4A0041C4B3 /* TKOnboarding.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -347,11 +347,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		45F99133228F5CE200BB7D47 /* TKOnboarding.framework */ = {
+		45285BFD22915F4A0041C4B3 /* TKOnboarding.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = TKOnboarding.framework;
-			remoteRef = 45F99132228F5CE200BB7D47 /* PBXContainerItemProxy */;
+			remoteRef = 45285BFC22915F4A0041C4B3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -433,10 +433,10 @@
 			target = 45015E26228CBC6A0026A2A0 /* tklabsdemo */;
 			targetProxy = 45015E4A228CBC770026A2A0 /* PBXContainerItemProxy */;
 		};
-		45F99137228F5D1B00BB7D47 /* PBXTargetDependency */ = {
+		45285C0122915F540041C4B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TKOnboarding;
-			targetProxy = 45F99136228F5D1B00BB7D47 /* PBXContainerItemProxy */;
+			targetProxy = 45285C0022915F540041C4B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
